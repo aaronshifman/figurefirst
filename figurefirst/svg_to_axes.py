@@ -1241,7 +1241,7 @@ class FigureLayout(object):
         except UnicodeEncodeError:
             outfile.close()
             outfile = open(output_filename, 'w')
-            outfile.write(self.output_xml.toxml().encode('ascii', 'xmlcharrefreplace'))
+            outfile.write(self.output_xml.toxml().encode('utf-8', 'xmlcharrefreplace'))
             outfile.close()
 
     def save(self,filename,hidelayers = (),targetlayer = None,fix_meterlimt= True):
